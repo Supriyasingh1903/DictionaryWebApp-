@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic setup for the webpage -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary Web App</title>
+    
+    <!-- Linking CSS files -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Main container for all content -->
+    <div class="container">
+        <!-- Header section with logo and settings -->
+        <header>
+            <div class="logo">
+                <!-- Book icon -->
+                <i class="fas fa-book-open"></i>
+                <!-- Main title -->
+                <h1>Dictionary</h1>
+            </div>
+            
+            <!-- Settings section -->
+            <div class="settings">
+                <!-- Font selection dropdown -->
+                <div class="font-selector">
+                    <select id="font-select">
+                        <option value="'Inter', sans-serif">Inter</option>
+                        <option value="'Roboto', sans-serif">Roboto</option>
+                        <option value="'Open Sans', sans-serif">Open Sans</option>
+                        <option value="'Times New Roman', serif">Times New Roman</option>
+                        <option value="'Courier New', monospace">Courier New</option>
+                        <option value="serif">Serif</option>
+                        <option value="sans">Sans</option>
+                        <option value="mono">Mono</option>
+                    </select>
+                </div>
+                
+                <!-- Dark/light mode toggle -->
+                <div class="theme-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-btn">
+                        <span class="slider round"></span>
+                    </label>
+                    <!-- Moon icon -->
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search area -->
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for a word...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+
+        <!-- Results display area -->
+        <div class="result-container">
+            <!-- Word header with pronunciation button -->
+            <div class="word-header">
+                <h2 id="word">Dictionary</h2>
+                <button id="audio-btn"><i class="fas fa-volume-up"></i></button>
+            </div>
+            
+            <!-- Phonetic pronunciation -->
+            <div class="word-details">
+                <p class="phonetic">/ˈdɪkʃənəri/</p>
+            </div>
+
+            <!-- Meanings will be shown here -->
+            <div id="meanings-container">
+                <!-- This will be filled by JavaScript -->
+            </div>
+
+            <!-- Source information -->
+            <div class="source">
+                <p>Source: <a href="https://en.wiktionary.org/wiki/dictionary" target="_blank">https://en.wiktionary.org/wiki/dictionary</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html
